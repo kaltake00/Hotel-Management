@@ -1,0 +1,73 @@
+.mainInformationsWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.deviderLine{
+    width: 100%;
+    height: 2px;
+    background-color: #f7f7f7;
+}
+
+.profileInfoWrapper, .revenueInfoWrapper{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.roomsInfoWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+.profileActionWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileAction{
+    display: flex;
+    align-items: center;
+    color: #a5a5a5;
+    cursor:pointer;
+    transition: all .3s ease;
+    font-weight: 300;
+}
+.profileAction:first-child{
+    margin-bottom: 6px;
+}
+.profileAction:hover{
+    color: #12adc1;
+}
+
+.roomsInfoIconWrapper{
+    padding: 10px;
+    background-color: #12adc155;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    margin-right: 15px;
+    max-height: 30px;
+    align-self: center;
+}
+.roomsInfoIconWrapper svg{
+    color: #12adc1;
+    font-size: 28px;
+}
+
+.roomsInfoNumber{
+    font-size: 24px;
+    font-weight: 500;
+}

@@ -1,0 +1,47 @@
+.headerWrapper{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #12adc1;
+    box-shadow: 0 2px 20px hsla(0, 0%, 0%, 25%);
+
+}
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoText{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.headerMenu{
+    display: flex;
+    align-items: center;
+}
+
+.menuItem{
+    margin-left: 10px;
+    color: #fff;
+    padding: 10px;
+    transition: all .3s ease;
+    border-radius: 5px;
+}
+
+.menuItem:hover{
+    background-color: #4cb6c4;
+}
+
+.loginBtn{
+    background-color: #fdd037;
+    padding: 7px 25px;
+    border-radius: 20px;
+}
+
+.menuItem .active{
+    border-bottom: 1px solid #12adc1;
+}

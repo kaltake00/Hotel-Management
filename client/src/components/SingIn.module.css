@@ -1,0 +1,51 @@
+.signInComponent{
+    background-color: #ebecef;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginCard{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    min-width: 380px;
+}
+
+.loginCard form {
+    display: flex;
+    flex-direction: column;
+}
+.loginCard h1{
+    margin-bottom: 20px;
+}
+.loginCard input{
+    border: 2px solid #ebecef;
+    min-height: 28px;
+    margin-bottom: 12px;
+    padding: 5px 15px;
+    transition: all 1s ease;
+}
+
+.loginCard input:focus{
+    border-radius: 10px;
+    border: 2px solid #12adc1;
+    outline: none;
+}
+
+.loginCard button{
+    width: 180px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.redirectLink{
+    transition: all .3s ease;
+    color: #12adc1;
+    margin-top: 20px;
+}
+.redirectLink:hover{
+    color: #045d69;
+}

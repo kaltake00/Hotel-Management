@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.container{
+  max-width: 1440px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p{
+  margin: 0
+}
+
+
+.mainButton {
+  background-color: #fdd037;
+  border-radius: 7px;
+  padding: 5px 25px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600px;
+  color: #000;
+  border: 1px solid #c79b0c;
+}
+
+.secondaryButton {
+  background-color: #12adc1;
+  border-radius: 7px;
+  padding: 5px 25px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 300px;
+  color: #fff;
+  border: 1px solid #056c79;
+}
+

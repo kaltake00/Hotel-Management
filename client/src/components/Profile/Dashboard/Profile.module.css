@@ -1,0 +1,74 @@
+.profileContainer{
+    padding: 25px 40px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 75px;
+
+}
+
+.profilePictureWrapper{
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 29%;
+    
+}
+.profilePictureWrapper h3{
+    margin-bottom: 25px;
+}
+.profilePictureWrapper img{
+    width: 125px;
+}
+
+.profilePictureWrapper .formWrapper{
+    margin-left: 20px;
+}
+.profilePictureWrapper .formWrapper button{
+    margin-top: 15px;
+}
+
+
+.profileInformationsWrapper{
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 33.333%;
+    justify-content: space-between;
+}
+.profileInformationsWrapper h3{
+    margin-bottom: 15px;
+}
+.informationWrapper{
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.informationWrapper p{
+    min-width: 25%;
+}
+.informationWrapper input{
+    outline: none;
+    border: 1px solid #12adc1;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.credentialsWrapper{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.credentialsWrapper p{
+    min-width: 45%;
+}
+.credentialsWrapper input{
+    outline: none;
+    border: 1px solid #12adc1;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
