@@ -1,16 +1,32 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import styles from './AdminRooms.module.css'
 import NewRoomModal from './NewRoomModal'
 
 function AdminRooms() {
+  
   const [createModalOpened, setCreateModalOpened] = useState(false);
+
+
+  ////////////////////////////////////////////////////////////////
   const closeCreateModal = () =>{
     setCreateModalOpened(false)
   }
-  const openCreateModal = () => setCreateModalOpened(true)
+
+  const openCreateModal = () => setCreateModalOpened(true);
+
+  const submitNewRoom = async(formData) =>{
+    try {
+      const res = await axios.post("http://localhost:3001/room", formData)
+      console.log(res)
+    }
+    catch (ex){console.log(ex)}
+  }
+
+  /////////////////////////////////////////////////////////////////////
   return (
     <div className='container'>
-      {createModalOpened && <NewRoomModal onClose={closeCreateModal}/>}
+      {createModalOpened && <NewRoomModal onClose={closeCreateModal} onSubmit={submitNewRoom}/>}
       <div className={styles.topActionsWrapper}>
         <div style={{textAlign: "left"}}>
           <h3>Welcome to the admin rooms</h3>

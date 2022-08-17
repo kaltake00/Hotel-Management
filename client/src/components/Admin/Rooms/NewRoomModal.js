@@ -15,13 +15,14 @@ function NewRoomModal(props) {
 
     const submitNewRoom = (e) =>{
         e.preventDefault()
-        const newRoomData = {
-            roomName: roomName,
-            roomBeds: roomBeds,
-            roomPrice: roomPrice,
-            fileName: fileName
-        }
-        console.log('SUBMITED ROOM: ', newRoomData)
+        const formData = new FormData();
+        formData.append('roomName', roomName)
+        formData.append('roomBeds', roomBeds)
+        formData.append('roomPrice', roomPrice)
+        formData.append('file', file)
+        formData.append('fileName', fileName)
+        console.log('SUBMITED ROOM: ', formData)
+        props.onSubmit(formData)
     }
 
     return (
