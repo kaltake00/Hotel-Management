@@ -24,6 +24,7 @@ app.use(session({
 // Endpoints
 const authentication = require('./Endpoints/Auth')
 const user = require('./Endpoints/User')
+const room = require('./Endpoints/Rooms')
 
 // AUTHENTICATION APIs 
 app.post('/register', authentication.registerUser)
@@ -51,6 +52,19 @@ var upload = multer({
 app.put("/profile/image", upload.single('file'), user.updateProfileImage);
 
 
+// Room APIs
+var roomStorage = multer.diskStorage({
+    destination: (req, file, callBack) => {
+        callBack(null, './public/images/rooms/')     // './public/images/' directory name where save the file
+    },
+    filename: (req, file, callBack) => {
+        callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+var roomImageUpload = multer({
+    storage: roomStorage
+})
+app.post('/room', roomImageUpload.single('file'), room.createRoom)
 
 // Running the App
 app.listen(process.env.PORT || 3001, () => {
