@@ -21,7 +21,7 @@ function AdminRooms() {
   }
 
   const openCreateModal = () => setCreateModalOpened(true);
-
+    // CREATE
   const submitNewRoom = async(formData) =>{
     try {
       const res = await axios.post("http://localhost:3001/room", formData)
@@ -31,10 +31,17 @@ function AdminRooms() {
     }
     catch (ex){console.log(ex)}
   }
-
+    // READ
   const getAllRooms = async () => {
     const result = await axios.get("http://localhost:3001/rooms")
     setRooms(result.data)
+  }
+    // DLETE
+  const deleteRoom = async (roomId) => {
+    console.log('successfully deleted room id: ', roomId)
+    await axios.delete(`http://localhost:3001/rooms/delete/${roomId}`)
+    NotificationManager.info("Room has been successfully deleted", 'Deleting room');
+    getAllRooms()
   }
 
   /////////////////////////////////////////////////////////////////////
@@ -55,7 +62,7 @@ function AdminRooms() {
 
       <div className={styles.roomsWrapper}>
         {rooms.length > 0
-          ? rooms.map(room => <RoomCard key={room.id} roomData={room}/>)
+          ? rooms.map(room => <RoomCard key={room.id} roomData={room} onDelete={deleteRoom}/>)
           : <h1>Sorry there are no rooms</h1>
         }
       </div>

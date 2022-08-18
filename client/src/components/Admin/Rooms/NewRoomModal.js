@@ -15,6 +15,9 @@ function NewRoomModal(props) {
 
     const submitNewRoom = (e) =>{
         e.preventDefault()
+        if (file.length < 1) {
+            console.log('No file uploaded')
+        }
         const formData = new FormData();
         formData.append('roomName', roomName)
         formData.append('roomBeds', roomBeds)
