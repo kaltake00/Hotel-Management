@@ -66,6 +66,12 @@ var roomImageUpload = multer({
 })
 app.post('/room', roomImageUpload.single('file'), room.createRoom)
 app.get('/rooms', room.getAllRooms)
+app.delete('/rooms/delete/:id', room.deleteRoom)
+
+
+
+
+
 
 // Running the App
 app.listen(process.env.PORT || 3001, () => {

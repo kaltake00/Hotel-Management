@@ -36,4 +36,18 @@ const createRoom = (req, res) => {
 }
 
 
-module.exports = {getAllRooms, createRoom}
+const deleteRoom = (req, res) => {
+    db.query('DELETE FROM rooms WHERE id = ' + req.params.id, (err, result) =>{
+        if (err) {
+            console.log(err)
+        }
+        else {
+            res.send({
+                message: "Successfully deleted room"
+            })
+        }
+    }) 
+}
+
+
+module.exports = {getAllRooms, createRoom, deleteRoom}
