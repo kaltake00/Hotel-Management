@@ -1,12 +1,19 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './AdminRooms.module.css'
 import NewRoomModal from './NewRoomModal'
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+import RoomCard from './RoomCard';
+
 
 function AdminRooms() {
-  
-  const [createModalOpened, setCreateModalOpened] = useState(false);
 
+  useEffect(()=>{
+    getAllRooms()
+  }, [])
+
+  const [createModalOpened, setCreateModalOpened] = useState(false);
+  const [rooms, setRooms] = useState([])
 
   ////////////////////////////////////////////////////////////////
   const closeCreateModal = () =>{
@@ -19,8 +26,15 @@ function AdminRooms() {
     try {
       const res = await axios.post("http://localhost:3001/room", formData)
       console.log(res)
+      NotificationManager.success(res.data.message, 'Room created!');
+      getAllRooms()
     }
     catch (ex){console.log(ex)}
+  }
+
+  const getAllRooms = async () => {
+    const result = await axios.get("http://localhost:3001/rooms")
+    setRooms(result.data)
   }
 
   /////////////////////////////////////////////////////////////////////
@@ -40,8 +54,12 @@ function AdminRooms() {
       </div>
 
       <div className={styles.roomsWrapper}>
-        <h1>Sorry there are no rooms for now!</h1>
+        {rooms.length > 0
+          ? rooms.map(room => <RoomCard key={room.id} roomData={room}/>)
+          : <h1>Sorry there are no rooms</h1>
+        }
       </div>
+      <NotificationContainer/>
     </div>
   )
 }

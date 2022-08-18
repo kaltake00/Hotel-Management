@@ -65,6 +65,7 @@ var roomImageUpload = multer({
     storage: roomStorage
 })
 app.post('/room', roomImageUpload.single('file'), room.createRoom)
+app.get('/rooms', room.getAllRooms)
 
 // Running the App
 app.listen(process.env.PORT || 3001, () => {

@@ -22,12 +22,15 @@ const createRoom = (req, res) => {
         console.log(req.file.filename)
         var imgsrc = 'http://127.0.0.1:3001/images/rooms/' + req.file.filename
         db.query("INSERT INTO rooms (name, beds, price, featured_img) VALUES (?, ?, ?, ?)",
-        [req.body.roomName, req.body.roomBeds, req.body.roomPrice, imgsrc], (err,res)=>{
-            if (err) throw err
-            console.log('Room successfully created!')
-            res.send({
-                message: "Room has been successfully created!"
-            })
+        [req.body.roomName, req.body.roomBeds, req.body.roomPrice, imgsrc], (err,result)=>{
+            if (err) {
+                console.log(err)
+            } else {
+                console.log('Room successfully created!')
+                res.send({
+                    message: "Room has been successfully created!"
+                })
+            }
         })
     }
 }

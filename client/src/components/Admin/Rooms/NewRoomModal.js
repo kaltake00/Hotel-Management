@@ -21,8 +21,9 @@ function NewRoomModal(props) {
         formData.append('roomPrice', roomPrice)
         formData.append('file', file)
         formData.append('fileName', fileName)
-        console.log('SUBMITED ROOM: ', formData)
+ 
         props.onSubmit(formData)
+        props.onClose()
     }
 
     return (

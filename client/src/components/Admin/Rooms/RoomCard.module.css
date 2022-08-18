@@ -1,0 +1,23 @@
+.roomCard{
+    width: 20%;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #f0f0f0, #e2e2e2);
+    box-shadow:  14px 14px 43px #b1b1b1,
+             -14px -14px 43px #ffffff;
+}
+
+.featuredImage{
+    max-width: 100%;
+    width: 100%;
+}
+.featuredImage img{
+    width: 100%;
+}
+
+.actionButtonsWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
