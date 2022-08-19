@@ -11,6 +11,16 @@ const getAllRooms = (req, res) =>{
     }) 
 }
 
+const getFeaturedRooms = (req, res) =>{
+    db.query("SELECT * FROM rooms ORDER BY id DESC LIMIT 3", (err,result)=>{
+        if (err){
+            console.log(err)
+        } else {
+            res.send(result)
+        }
+    })
+}
+
 
 const createRoom = (req, res) => {
     if (!req.file){
@@ -50,4 +60,4 @@ const deleteRoom = (req, res) => {
 }
 
 
-module.exports = {getAllRooms, createRoom, deleteRoom}
+module.exports = {getAllRooms, getFeaturedRooms, createRoom, deleteRoom}

@@ -66,6 +66,7 @@ var roomImageUpload = multer({
 })
 app.post('/room', roomImageUpload.single('file'), room.createRoom)
 app.get('/rooms', room.getAllRooms)
+app.get('/rooms/featured', room.getFeaturedRooms)
 app.delete('/rooms/delete/:id', room.deleteRoom)
 
 
