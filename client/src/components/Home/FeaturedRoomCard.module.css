@@ -1,0 +1,85 @@
+.roomCard{
+    border-radius: 10px;
+    width: 33.333%;
+    box-shadow: -1px 19px 44px -4px rgba(189,189,189,0.75);
+}
+.roomImageWrapper{
+    position: relative;
+}
+.roomImageWrapper img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 270px;
+}
+.editRoomWrapper{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.432);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .34s ease;
+}
+.editRoomWrapper:hover{
+    background-color: #fff;
+}
+.roomBody{
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    margin-top: -10px;
+}
+
+.roomInformations{
+    text-align: left;
+}
+
+.roomPrice{
+    color: #FF8892;
+    font-weight: 700;
+}
+.totalBeds{
+    color: rgb(153, 151, 151)
+}
+
+.roomButton{
+    border: 3px solid #E4F3F7;
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    transition: all .45s ease;
+    cursor: pointer;
+}
+.roomButton:hover{
+    transform: scale(1.1);
+    border-color: #bce6f1;
+}
+.roomButton:hover p{
+    font-weight: 600;
+}
+.roomButton p{
+    font-size: 12px;
+    font-weight: 500;
+    transition: all .45s ease;
+
+}
+.roomButton svg{
+    font-size: 20px;
+}
+
+

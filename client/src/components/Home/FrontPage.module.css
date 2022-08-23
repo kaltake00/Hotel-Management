@@ -6,7 +6,6 @@
     background: linear-gradient(90deg, rgba(179, 234, 187, 0.942) 0%, rgba(177, 219, 216, 0.844) 31%, rgba(0,212,255,0.3536765047816002) 100%), url("../../../public/Images/2.jpg");
     background-position: center center;
     text-align: left;
-    padding-left: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,3 +27,26 @@
     font-size: 50px;
     font-weight: 600;
 }
+
+.featuredRoom_section {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.sectionBreadcrumb{
+    display: flex;
+    justify-content: space-between;
+}
+.featuredRoom_wrapper{
+    background-color: #E4F3F7;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 120px; 
+    padding-bottom: 70px;
+}
+
+.featuredRooms_inner{
+    margin-top: -120px;
+    display: flex;
+    gap: 35px;
+}
+
