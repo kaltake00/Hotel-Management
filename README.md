@@ -32,7 +32,7 @@ To run this project, install it locally using `npm`
 ```
 $ cd ../Hotel Management App
 $ npm install
-$ node index.js // to start backend server (Its highly recommended to start backend server before starting frontend app)
+$ node index.js // to start backend server (Its highly recommended to start backend server before frontend app)
 $ cd client
 $ npm start
 
