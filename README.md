@@ -28,11 +28,12 @@ For this project I chose technologies and frameworks that are based on `JavaScri
 ## Setup
 
 To run this project, install it locally using `npm`
+Its highly recommended to start backend server before frontend app
 
 ```
 $ cd ../Hotel Management App
 $ npm install
-$ node index.js // to start backend server (Its highly recommended to start backend server before frontend app)
+$ node index.js
 $ cd client
 $ npm start
 
