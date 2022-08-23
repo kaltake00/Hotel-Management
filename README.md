@@ -40,3 +40,4 @@ $ npm start
 
 ## Screenshots 
 
+![Homepage Mockup](./screenshots/mockuper.png)
