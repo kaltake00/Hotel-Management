@@ -64,6 +64,7 @@
     width: 35px;
     transition: all .45s ease;
     cursor: pointer;
+    color: #000
 }
 .roomButton:hover{
     transform: scale(1.1);

@@ -16,7 +16,6 @@ function App() {
         axios.defaults.withCredentials = true
         const result = await axios.get('http://localhost:3001/auth/hasloggedin')
         if(result.data.auth){
-            console.log('i am running')
             setAuth(true);
             setUserData(result.data.userData)
         }

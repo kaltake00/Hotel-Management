@@ -11,12 +11,14 @@ import SignUp from '../components/SignUp'
 import ProfileLayout from '../components/Profile/ProfileLayout'
 
 import AuthApi from '../utils/AuthApi'
+import SingleRoom from '../components/Room/SingleRoom'
 
 function MyRoutes() {
 
     return (
         <Routes>
             <Route path="/" element={<FrontPage />}/>
+            <Route path="/room/:id" element={<SingleRoom />} />
             <Route path="/signin" element={<AuthComponent component={SignIn}/>} />
             <Route path="/signup" element={<AuthComponent component={SignUp}/>} />
             <Route path="/profile" element={<PrivateComponent component={ProfileLayout}/>} >
