@@ -11,6 +11,16 @@ const getAllRooms = (req, res) =>{
     }) 
 }
 
+const getRoomById = (req, res) => {
+    db.query('SELECT * FROM rooms WHERE id = '+req.params.id, (err, result) => {
+        if (err) { 
+            console.log(err)
+        } else {
+            res.send(result)
+        }
+    })
+}
+
 const getFeaturedRooms = (req, res) =>{
     db.query("SELECT * FROM rooms ORDER BY id DESC LIMIT 3", (err,result)=>{
         if (err){
@@ -47,6 +57,7 @@ const createRoom = (req, res) => {
 
 
 const deleteRoom = (req, res) => {
+    console.log(req.params.id)
     db.query('DELETE FROM rooms WHERE id = ' + req.params.id, (err, result) =>{
         if (err) {
             console.log(err)
@@ -60,4 +71,4 @@ const deleteRoom = (req, res) => {
 }
 
 
-module.exports = {getAllRooms, getFeaturedRooms, createRoom, deleteRoom}
+module.exports = {getAllRooms, getRoomById, getFeaturedRooms, createRoom, deleteRoom}
