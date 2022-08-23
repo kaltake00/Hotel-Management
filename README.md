@@ -18,9 +18,25 @@ I worked on the project alone, improving my skills, and my goal is to get a job 
 
 ## Technologies
 
-For this project I chose technologies and frameworks that are based on JavaScript. Also what I strive to be in the near future is a MERN Stack developer.
+For this project I chose technologies and frameworks that are based on `JavaScript`. Also what I strive to be in the near future is a MERN Stack developer.
 
 * React.js 
 * Node.js
 * Express.js
 * MySQL
+
+## Setup
+
+To run this project, install it locally using `npm`
+
+```
+$ cd ../Hotel Management App
+$ npm install
+$ node index.js // to start backend server (Its highly recommended to start backend server before starting frontend app)
+$ cd client
+$ npm start
+
+```
+
+## Screenshots 
+
